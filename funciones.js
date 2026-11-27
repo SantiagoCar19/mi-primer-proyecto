@@ -1,17 +1,6 @@
-/*function esMayorDeEdad (edad) {
-    a = true;
-    if (edad >= 18) {
-        a = true;
-    } else {
-        a = false;
-    }
-    return a;
-}
-*/    
-
 function esMayorDeEdad (edad) {
-    let b = edad >= 18;
-    return b;
+    let booleano = edad >= 18;
+    return booleano;
 }
 
 function describirPersona (nombre, edad){
@@ -19,12 +8,16 @@ function describirPersona (nombre, edad){
 }
 
 function clasificarPersona(nombre, edad){
-    esMayorDeEdad(edad);
-    
-    return nombre 
+    if(esMayorDeEdad(edad)){
+        let respuesta = nombre + " es mayor de edad";
+    } else {
+        respuesta = nombre + " es menor de edad";
+    } 
+    return respuesta;
 }
 
 console.log(esMayorDeEdad(12));
 
 console.log(describirPersona("Santiago", 25));
 
+console.log(clasificarPersona("santiago", 17));
